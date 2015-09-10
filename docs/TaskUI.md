@@ -1,6 +1,8 @@
 Team Foundation Build FinalBuilder Task UI
 ==========================================
 
+![](https://github.com/VSoftTechnologies/FinalBuilderTFS/blob/master/docs/images/FinalBuilderTaskOptionsAll.png)
+
 FinalBuilder General
 ----------------------
 
@@ -25,5 +27,9 @@ For backwards compatiblity with XAML builds we offer the same options that were 
 
 Get Team Foundation Build Parameters
 ----------------------
+
+![](https://github.com/VSoftTechnologies/FinalBuilderTFS/blob/master/docs/images/GetTeamFoundationBuildParameters.png)
+
+![](https://github.com/VSoftTechnologies/FinalBuilderTFS/blob/master/docs/images/GetTeamFoundationBuildParameters_CustomArgs.png)
 
 Get Team Foundation Build Parameters action in FinalBuilder is the method of extracting the above variables and using them within a FinalBuilder script. Include this action, create variables for each of the parameters required for the build, and assign them as required. 
