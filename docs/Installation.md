@@ -1,9 +1,11 @@
-﻿Task Installation
+﻿FinalBuilder Task Installation
 ----------------------
 
 To use the FinalBuilder Task in Team Foundation Build the task needs to be uploaded to your Team Foundation Server (TFS). This can either be your Visual Studio Online (VSO) account or an on premises TFS installation. 
 
-Uploading the task requires the use of the tfx-cli tool created by microsoft. Below are the command lines required to perform the installation.  
+Uploading the task requires the use of this repository, npm, and a microsoft tool called tfx-cli. Below we provide the steps to install the FinalBuilder Task onto TFS from scratch.   
+
+## Repository Clone
 
 To clone this repository use the following command line. You will require git to be installed and available on your path. 
 
@@ -99,7 +101,7 @@ Options:
 
 For tfx-cli to upload a task to TFS it needs to be logged in. We can do this once so that all following commands will use the some credentials. The method used depends on whether your using VSO or an On Prem installation. 
 
-On Prem Login
+## On Prem Login
 ----------------------
 
 For on premises TFS basic authentication will need to be enabled. The tfx-cli project has a great guide on how to achieve this [Using tfx against Team Foundation Server (TFS) 2015 using Basic Authentication](https://github.com/Microsoft/tfs-cli/blob/master/docs/configureBasicAuth.md).
@@ -119,7 +121,7 @@ logged in successfully
 
 With a succesful login subsequent commands will not require us to provide the credentials again. 
 
-Visual Studio Online (VSO) Login
+## Visual Studio Online (VSO) Login
 ----------------------
 
 For VSO login you need a personal access token setup under your account. There is a great article to configure an access token located at [Using Personal Access Tokens to access Visual Studio Online](http://roadtoalm.com/2015/07/22/using-personal-access-tokens-to-access-visual-studio-online/).
@@ -138,7 +140,7 @@ logged in successfully
 
 With a succesful login subsequent commands will not require us to provide the credentials again. 
 
-Uploading Task
+## Uploading Task
 ----------------------
 
 Once logged into TFS we are able to upload the FinalBuilder task to the server. Tasks are uploaded to the server, the server will then pass them onto agents requried to run those tasks. 
@@ -158,11 +160,11 @@ task at: ./FinalBuilder uploaded successfully!
 To test that the FinalBuilder task is now installed on the builds page for teh collection the task was uploaded to. Create a new empty Team Foundation Build definition. After clicking "Add build step" a FinalBuilder task should appear in the "Build" category. 
 
 
-For More Information
+## Further Steps
 ----------------------
 
 For more information on the following subjects please follow the links;
 
 * How to configure the build task refer to [Task UI](https://github.com/VSoft/FinalBuilderTFS/blob/master/docs/TaskUI.md).
-* How to install FinalBuilder on an agent refer to [Installing FinalBuilder](https://github.com/VSoft/FinalBuilderTFS/blob/master/docs/InstallingFinalBuilder.md)
+* How to install FinalBuilder on an agent refer to [Installing FinalBuilder](https://github.com/VSoft/FinalBuilderTFS/blob/master/docs/InstallingFinalBuilder.md).
 * How to create a FinalBuilder VSO agent refer to [Creating a VSO FinalBuilder Agent](https://github.com/VSoft/FinalBuilderTFS/blob/master/docs/FinalBuilderVSOAgent.md).
