@@ -1,4 +1,4 @@
-﻿Team Foundation Build - FinalBuilder Task
+﻿![](https://cdn.rawgit.com/VSoftTechnologies/cdn-images/v8/FinalBuilder-Icon-256.png)Team Foundation Build - FinalBuilder Task
 =========================================
 
 A [Team Foundation Build](https://msdn.microsoft.com/Library/vs/alm/Build/overview) task for running [FinalBuilder](https://www.finalbuilder.com/downloads/finalbuilder) projects. FinalBuilder provides a graphical IDE and command line to create, debug, and run software build projects. FinalBuilder includes over 700 actions for common software delivery activities. 
