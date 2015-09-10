@@ -32,6 +32,6 @@ git clone https://github.com/VSoftTechnologies/FinalBuilderTFS.git
 Installation requires use of the tfx-cli tool provided by Microsoft. Refer to the [Installation Steps](https://github.com/VSoftTechnologies/FinalBuilderTFS/blob/master/docs/Installation.md) for detailed instructions if your unfamiliar with this tool. 
 
 `
-tfx login 
+tfx login
 tfx build tasks upload ./FinalBuilder --overwrite
 `
