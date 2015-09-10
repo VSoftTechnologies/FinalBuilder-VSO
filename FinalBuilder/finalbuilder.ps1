@@ -469,12 +469,11 @@ import-module "Microsoft.TeamFoundation.DistributedTask.Task.Common"
 
 Set-Variable pageSize -option Constant -value 50
 
-if(!$cwd) {
-    throw ("Working directory parameter is not set")
-}
-
-if ( -not (Test-Path $cwd -PathType Container)) {
-    throw ("$cwd does not exist")
+# Find working directory. cwd is optional, we use directory of wrapper as working directory if not set.
+if(!$cwd)
+{
+    $projectfilePath = Get-Item -Path $projectfile
+    $cwd = $projectfilePath.Directory.FullName
 }
 
 # Work out of the solution file contains a search string

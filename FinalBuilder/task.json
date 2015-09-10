@@ -3,7 +3,7 @@
   "name": "FinalBuilder",
   "friendlyName": "FinalBuilder",
   "description": "Automate using a FinalBuilder script",
-  "helpMarkDown": "[More Information](https://www.finalbuilder.com/)",
+  "helpMarkDown": "[More Information](https://github.com/VSoftTechnologies/FinalBuilderTFS)",
   "category": "Build",
   "visibility": [
     "Build",
@@ -14,7 +14,7 @@
   "version": {
     "Major": "1",
     "Minor": "0",
-    "Patch": "172"
+    "Patch": "176"
   },
   "minimumAgentVersion": "1.83.0",
   "groups": [
