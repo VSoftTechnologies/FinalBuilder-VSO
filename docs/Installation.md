@@ -165,6 +165,6 @@ To test that the FinalBuilder task is now installed on the builds page for teh c
 
 For more information on the following subjects please follow the links;
 
-* How to configure the build task refer to [Task UI](https://github.com/VSoft/FinalBuilderTFS/blob/master/docs/TaskUI.md).
-* How to install FinalBuilder on an agent refer to [Installing FinalBuilder](https://github.com/VSoft/FinalBuilderTFS/blob/master/docs/InstallingFinalBuilder.md).
-* How to create a FinalBuilder VSO agent refer to [Creating a VSO FinalBuilder Agent](https://github.com/VSoft/FinalBuilderTFS/blob/master/docs/FinalBuilderVSOAgent.md).
+* How to configure the build task refer to [Task UI](https://github.com/VSoftTechnologies/FinalBuilderTFS/blob/master/docs/TaskUI.md).
+* How to install FinalBuilder on an agent refer to [Installing FinalBuilder](https://github.com/VSoftTechnologies/FinalBuilderTFS/blob/master/docs/InstallingFinalBuilder.md).
+* How to create a FinalBuilder VSO agent refer to [Creating a VSO FinalBuilder Agent](https://github.com/VSoftTechnologies/FinalBuilderTFS/blob/master/docs/FinalBuilderVSOAgent.md).
