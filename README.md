@@ -5,4 +5,4 @@ A [Team Foundation Build](https://msdn.microsoft.com/Library/vs/alm/Build/overvi
 
 This task brings to Team Foundation Build features such as logic operations, script flow control, and async operations all through an IDE editor. Currently the FinalBuilder task is only available for Windows platforms. 
 
-For installation refer to the [Installation Steps](https://github.com/VSoft/FinalBuilderTFS/blob/master/docs/Installation.md) help.
+For installation refer to the [Installation Steps](https://github.com/VSoftTechnologies/FinalBuilderTFS/blob/master/docs/Installation.md) help.
