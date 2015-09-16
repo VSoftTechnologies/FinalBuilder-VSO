@@ -15,7 +15,7 @@ The FinalBuilder task brings to Team Foundation Server/Visual Studio Online Buil
 
 *Currently the FinalBuilder task is only available for Windows platforms.* 
 
-For detailed installation installations refer to the [Installation Steps](https://github.com/VSoftTechnologies/FinalBuilderTFS/blob/master/docs/Installation.md).
+For detailed installation installations refer to the [Installation Steps](https://github.com/VSoftTechnologies/FinalBuilder-VSO/blob/master/docs/Installation.md).
 
 ## Quick Help
 
@@ -24,12 +24,12 @@ For detailed installation installations refer to the [Installation Steps](https:
 Use git to clone this repository to a location of your choice. 
 
 ```
-git clone https://github.com/VSoftTechnologies/FinalBuilderTFS.git
+git clone https://github.com/VSoftTechnologies/FinalBuilder-VSO.git
 ```
 
 ### Installation
 
-Installation requires use of the tfx-cli tool provided by Microsoft. Refer to the [Installation Steps](https://github.com/VSoftTechnologies/FinalBuilderTFS/blob/master/docs/Installation.md) for detailed instructions if your unfamiliar with this tool. 
+Installation requires use of the tfx-cli tool provided by Microsoft. Refer to the [Installation Steps](https://github.com/VSoftTechnologies/FinalBuilder-VSO/blob/master/docs/Installation.md) for detailed instructions if your unfamiliar with this tool. 
 
 ```
 tfx login
