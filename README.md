@@ -1,8 +1,8 @@
 ﻿## FinalBuilder Team Foundation Build Task
 
-A [Team Foundation Build](https://msdn.microsoft.com/Library/vs/alm/Build/overview) task for running [FinalBuilder](https://www.finalbuilder.com/downloads/finalbuilder) projects. FinalBuilder provides a graphical IDE and command line to create, debug, and run software build projects.  
+A [Team Foundation Server/Visual Studio Online](https://github.com/Microsoft/vso-agent-tasks) task for running [FinalBuilder](https://www.finalbuilder.com/downloads/finalbuilder) projects. FinalBuilder provides a graphical IDE and command line to create, debug, and run software build projects.  
 
-The FinalBuilder task brings to Team Foundation Build over 700 actions for common software delivery tasks. Notable groups of these actions include;
+The FinalBuilder task brings to Team Foundation Server/Visual Studio Online Build over 700 actions for common software delivery tasks. Notable groups of these actions include;
 
 * Build logic - If..Then, Try..Catch..Finally, Switch, While, Iterator, and Async
 * Version control - AccuRev, CVS, Git, ClearCase, JediVCS, Mercurial, TFS, Plastic SCM, PureCM, Perforce, QVCS, Subversion, Surround, and Sourcegear Vault
