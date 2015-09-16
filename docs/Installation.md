@@ -12,9 +12,9 @@ To clone this repository use the following command line. You will require git to
 ```
 > mkdir VSoft
 > cd VSoft
-> git clone https://github.com/VSoftTechnologies/FinalBuilderTFS.git
+> git clone https://github.com/VSoftTechnologies/FinalBuilder-VSO.git
 
-Cloning into 'FinalBuilderTFS'...
+Cloning into 'FinalBuilder-VSO'...
 remote: Counting objects: X, done.
 remote: Compressing objects: 100% (X/X), done.
 remote: Total X (delta 0), reused 0 (delta 0), pack-reused 0
@@ -160,6 +160,6 @@ To test that the FinalBuilder task is now installed on the builds page for teh c
 
 For more information on the following subjects please follow the links;
 
-* How to configure the build task refer to [Task UI](https://github.com/VSoftTechnologies/FinalBuilderTFS/blob/master/docs/TaskUI.md).
-* How to install FinalBuilder on an agent refer to [Installing FinalBuilder](https://github.com/VSoftTechnologies/FinalBuilderTFS/blob/master/docs/InstallingFinalBuilder.md).
-* How to create a FinalBuilder VSO agent refer to [Creating a VSO FinalBuilder Agent](https://github.com/VSoftTechnologies/FinalBuilderTFS/blob/master/docs/FinalBuilderVSOAgent.md).
+* How to configure the build task refer to [Task UI](https://github.com/VSoftTechnologies/FinalBuilder-VSO/blob/master/docs/TaskUI.md).
+* How to install FinalBuilder on an agent refer to [Installing FinalBuilder](https://github.com/VSoftTechnologies/FinalBuilder-VSO/blob/master/docs/InstallingFinalBuilder.md).
+* How to create a FinalBuilder VSO agent refer to [Creating a VSO FinalBuilder Agent](https://github.com/VSoftTechnologies/FinalBuilder-VSO/blob/master/docs/FinalBuilderVSOAgent.md).
