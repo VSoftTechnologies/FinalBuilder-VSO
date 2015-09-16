@@ -101,7 +101,7 @@ Options:
 
 For tfx-cli to upload a task to TFS it needs to be logged in. We can do this once so that all following commands will use the some credentials. The method used depends on whether your using VSO or an On Prem installation. 
 
-### On Prem Login
+### On Premises Login
 
 For on premises TFS basic authentication will need to be enabled. The tfx-cli project has a great guide on how to achieve this [Using tfx against Team Foundation Server (TFS) 2015 using Basic Authentication](https://github.com/Microsoft/tfs-cli/blob/master/docs/configureBasicAuth.md).
 
