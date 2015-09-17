@@ -3,7 +3,7 @@
 
 To use the FinalBuilder Task in Team Foundation Build the task needs to be uploaded to your Team Foundation Server (TFS). This can either be your Visual Studio Online (VSO) account or an on premises TFS installation. 
 
-Uploading the task requires the use of this repository, npm, and a microsoft tool called tfx-cli. Below we provide the steps to install the FinalBuilder Task onto TFS from scratch.   
+Uploading the task requires the use of this repository, npm, and a Microsoft tool called tfx-cli. Below we provide the steps to install the FinalBuilder Task onto TFS from scratch.   
 
 ### Repository Clone
 
@@ -32,7 +32,7 @@ To check that NPM is working correctly you can use the npm version command
 2.10.1
 ```
 
-Now your able to install the tfx-cli package using npm. Install this globally so that its accessable on the command line. The comand line for this is as follows;
+Now your able to install the tfx-cli package using npm. Install this globally so that its accessible on the command line. The command line for this is as follows;
 
 ```
 > npm install -g tfx-cli
@@ -105,7 +105,7 @@ For tfx-cli to upload a task to TFS it needs to be logged in. We can do this onc
 
 For on premises TFS basic authentication will need to be enabled. The tfx-cli project has a great guide on how to achieve this [Using tfx against Team Foundation Server (TFS) 2015 using Basic Authentication](https://github.com/Microsoft/tfs-cli/blob/master/docs/configureBasicAuth.md).
 
-Once TFS has been configured to use basic authentication use the tfx-cli login command to connect to TFS. You will be prompted for the TFS collection URL to connect to, and the username and password for accesssing that collection. 
+Once TFS has been configured to use basic authentication use the tfx-cli login command to connect to TFS. You will be prompted for the TFS collection URL to connect to, and the username and password for accessing that collection. 
 
 ```
 > tfx login --authType basic
@@ -118,13 +118,13 @@ Enter password > <password>
 logged in successfully
 ```
 
-With a succesful login subsequent commands will not require us to provide the credentials again. 
+With a successful login subsequent commands will not require us to provide the credentials again. 
 
 ### Visual Studio Online (VSO) Login
 
 For VSO login you need a personal access token setup under your account. There is a great article to configure an access token located at [Using Personal Access Tokens to access Visual Studio Online](http://roadtoalm.com/2015/07/22/using-personal-access-tokens-to-access-visual-studio-online/).
 
-With the personal access token configured use the tfx-cli login command to connect to VSO. You will be prompted for the TFS collection URL to connect to, and access token for accesssing that collection.
+With the personal access token configured use the tfx-cli login command to connect to VSO. You will be prompted for the TFS collection URL to connect to, and access token for accessing that collection.
 
 ```
 > tfx login
@@ -136,11 +136,11 @@ Enter personal access token > <access token>
 logged in successfully
 ```
 
-With a succesful login subsequent commands will not require us to provide the credentials again. 
+With a successful login subsequent commands will not require us to provide the credentials again. 
 
 ### Uploading Task
 
-Once logged into TFS we are able to upload the FinalBuilder task to the server. Tasks are uploaded to the server, the server will then pass them onto agents requried to run those tasks. 
+Once logged into TFS we are able to upload the FinalBuilder task to the server. Tasks are uploaded to the server, the server will then pass them onto agents required to run those tasks. 
 
 To upload the task use the tfx-cli tasks upload command. Each command shown below is a sub-command of the previous, so order does matter here. The overwrite option is included so that any previously installed version is overwritten. Note however the highest version number of the task will win when running builds.
 

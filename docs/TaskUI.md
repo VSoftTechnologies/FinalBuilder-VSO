@@ -6,7 +6,7 @@ Team Foundation Build FinalBuilder Task UI
 FinalBuilder General
 ----------------------
 
-* ***FinalBuilder project*** - The repository location of the FinalBuilder script to run for the build. The repository location will be converted to an on disk location after the source is transfered to the build agent. 
+* ***FinalBuilder project*** - The repository location of the FinalBuilder script to run for the build. The repository location will be converted to an on disk location after the source is transferred to the build agent. 
 * ***Working directory*** - The repository directory that should be treated as the working directory for the FinalBuilder project run. By default this will be the base source directory if not set. 
 * ***Drop folder*** - The network location to pass to the FinalBuilder script as the drop location for artefacts. In XAML builds having a drop folder was common, this option simply mimics that feature. By default the location is blank. 
 
