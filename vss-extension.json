@@ -2,7 +2,7 @@
 	"manifestVersion": 1,
 	"id": "finalbuilder-extension",
 	"name": "FinalBuilder Build",
-	"version": "1.0.7",
+	"version": "1.0.8",
 	"publisher": "vsoft",
 	"categories": [
 		"Build and release"
@@ -13,7 +13,7 @@
         }
     ],  
 	"description": "FinalBuilder provides a graphical IDE and command line to create, debug, and run software build projects.",
-	"public" : false,
+	"public" : true,
 	"tags": [
 		"finalbuilder",
 		"automation",
