@@ -1,6 +1,8 @@
 FinalBuilder Build Task
 ==========================================
 
+Build and release task for running FinalBuilder scripts. Have the same scripts locally, on prem, and in the cloud. 
+
 ![](Images/FinalBuilderTaskOptionsAll.png)
 
 FinalBuilder General
