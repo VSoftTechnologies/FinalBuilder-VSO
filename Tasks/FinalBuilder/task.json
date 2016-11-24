@@ -1,7 +1,7 @@
 {
   "id": "efcae8d0-4244-11e5-9a77-b380f8ce210e",
   "name": "FinalBuilder",
-  "friendlyName": "FinalBuilder",
+  "friendlyName": "Run FinalBuilder",
   "description": "Automate using a FinalBuilder script",
   "helpMarkDown": "[More Information](https://github.com/VSoftTechnologies/FinalBuilderTFS)",
   "category": "Build",
@@ -14,9 +14,9 @@
   "version": {
     "Major": "1",
     "Minor": "0",
-    "Patch": "176"
+    "Patch": "177"
   },
-  "minimumAgentVersion": "1.83.0",
+  "minimumAgentVersion": "1.83.2",
   "groups": [
     {
       "name": "general",

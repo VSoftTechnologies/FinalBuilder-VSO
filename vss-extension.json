@@ -1,0 +1,90 @@
+{
+	"manifestVersion": 1,
+	"id": "finalbuilder-extension",
+	"name": "FinalBuilder Build",
+	"version": "1.0.4",
+	"publisher": "vsoft",
+	"categories": [
+		"Build and release"
+	],
+	"targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],  
+	"description": "FinalBuilder provides a graphical IDE and command line to create, debug, and run software build projects.",
+	"public" : false,
+	"tags": [
+		"finalbuilder",
+		"automation",
+		"IDE",
+		"build",
+		"cmd",
+		"CLI"
+	],
+	"screenshots": [
+		{
+			"path": "Images/finalbuilder-build-task-add.png"
+		},
+		{
+			"path": "Images/finalbuilder-build-task-options.png"
+		}
+	],
+	"content": {
+        "details": {
+            "path": "overview.md"
+        }
+    },
+	"icons": {
+		"default": "Images/extension-icon.png"
+	},
+	"links": {
+		"home": {
+			"uri": "http://www.finalbuilder.com/"
+		},
+		"getstarted": {
+			"uri": "https://github.com/VSoftTechnologies/FinalBuilder-VSO/blob/master/docs/TaskUI.md"
+		},
+		"learn": {
+			"uri": "http://wiki.finalbuilder.com/display/FB8/Finalbuilder+Overview"
+		},
+		"support": {
+			"uri": "https://www.finalbuilder.com/support"
+		},
+		"repository": {
+			"uri": "https://github.com/VSoftTechnologies/FinalBuilder-VSO"
+		},
+		"issues": {
+			"uri": "https://github.com/VSoftTechnologies/FinalBuilder-VSO/issues"
+		}
+	},
+	 "branding": {
+        "color": "rgb(0, 122, 204)",
+        "theme": "light"
+    },
+    "files": [
+        {
+            "path": "Tasks"
+        },
+		{
+            "path": "Images",
+            "addressable": true
+        }
+    ], 
+	"scopes": [
+        "vso.build",
+        "vso.build_execute"
+    ],
+    "contributions": [
+        {
+            "id": "finalbuilder-build-task",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "Tasks/FinalBuilder"
+            }
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "finalbuilder-vsts",
+  "version": "1.0.0",
+  "description": "Finalbuilder VSTS Extension",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VSoftTechnologies/FinalBuilder-VSO.git"
+  },
+  "author": "VSoft Technologies",
+  "dependencies": {
+    "vsts-task-sdk": "^0.6.2"
+  }
+}

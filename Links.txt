@@ -1,0 +1,7 @@
+https://www.visualstudio.com/en-us/integrate/extensions/publish/overview
+
+https://www.visualstudio.com/integrate/extensions/overview
+
+https://www.visualstudio.com/integrate/extensions/develop/manifest
+
+https://www.visualstudio.com/integrate/extensions/publish/command-line
