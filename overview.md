@@ -1,7 +1,7 @@
 FinalBuilder Build Task
 ==========================================
 
-![](https://github.com/VSoftTechnologies/FinalBuilderTFS/blob/master/docs/images/FinalBuilderTaskOptionsAll.png)
+![](images/FinalBuilderTaskOptionsAll.png)
 
 FinalBuilder General
 ----------------------
@@ -30,7 +30,7 @@ Get Team Foundation Build Parameters
 
 Get Team Foundation Build Parameters action in FinalBuilder is the method of extracting the above variables and using them within a FinalBuilder script. Include this action, create variables for each of the parameters required for the build, and assign them as required. 
 
-![](https://github.com/VSoftTechnologies/FinalBuilderTFS/blob/master/docs/images/GetTeamFoundationBuildParameters.png)
+![](images/GetTeamFoundationBuildParameters.png)
 
 All the following parameters are either provided by the FinalBuilder task or from the environment variables provided by the agent runner.
 
@@ -45,6 +45,6 @@ All the following parameters are either provided by the FinalBuilder task or fro
 * ***Solution root folder*** - The root directory on the agent to which the source was copied. 
 * ***Working directory*** - The working directory set in the FinalBuilder task UI. 
 
-![](https://github.com/VSoftTechnologies/FinalBuilderTFS/blob/master/docs/images/GetTeamFoundationBuildParameters_CustomArgs.png)
+![](images/GetTeamFoundationBuildParameters_CustomArgs.png)
 
 * ***Custom Argument 1 to 10*** - Each of the first 10 lines of arguments added to the "Custom Arguments" field in the FinalBuilder task UI.
