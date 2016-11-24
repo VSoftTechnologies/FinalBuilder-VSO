@@ -2,7 +2,7 @@
 	"manifestVersion": 1,
 	"id": "finalbuilder-extension",
 	"name": "FinalBuilder Build",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"publisher": "vsoft",
 	"categories": [
 		"Build and release"
