@@ -147,7 +147,7 @@ To upload the task use the tfx-cli tasks upload command. Each command shown belo
 * Note: This command is run under the directory in which this repositry was cloned to (i.e. FinalBuilderTFS). *  
 
 ```
-> tfx build tasks upload ./FinalBuilder --overwrite
+> tfx build tasks upload --task-path ./FinalBuilder --overwrite
 
 Copyright Microsoft Corporation
 

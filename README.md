@@ -33,5 +33,5 @@ Installation requires use of the tfx-cli tool provided by Microsoft. Refer to th
 
 ```
 tfx login
-tfx build tasks upload ./FinalBuilder --overwrite
+tfx build tasks upload --task-path ./FinalBuilder --overwrite
 ```
