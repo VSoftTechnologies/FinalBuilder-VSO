@@ -1,8 +1,8 @@
 {
 	"manifestVersion": 1,
 	"id": "finalbuilder-extension",
-	"name": "FinalBuilder Build",
-	"version": "1.0.8",
+	"name": "FinalBuilder Build and Release Task",
+	"version": "1.0.9",
 	"publisher": "vsoft",
 	"categories": [
 		"Build and release"
