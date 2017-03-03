@@ -55,7 +55,7 @@ function Set-FB8EnvironmentVars([string]$buildPlatform, [string]$buildFlavor, [s
 	# Set each environment variable referred to by the Get Team Foundation Build Parameters action		
 	$env:_envTeamServer = $env:SYSTEM_TEAMFOUNDATIONCOLLECTIONURI
 	$env:_envTeamProject = $env:SYSTEM_TEAMPROJECTID
-	$env:_envTeamBuildId = $env:BUILD_BUILDID
+	$env:_envTeamBuildId = $env:BUILD_BUILDNUMBER
 	$env:_envBuildPlatform = $buildPlatform
 	$env:_envBuildFlavor = $buildFlavor
 	$env:_envDropFolder = $dropFolder
@@ -531,6 +531,7 @@ Write-Verbose "Updating Environment Vars"
 # Pass all the TFS build environment variables to the process so that FinalBuilder can pick them up. The Get Team Foundation Build Parameters action accesses these environment variables. 
 Set-FB8EnvironmentVars -buildPlatform $platform -buildFlavor $flavor -dropFolder $dropfolder -solutionRoot $cwd -workingDirectory $cwd -solutionFile $solutionfile -solutionfileList $solutionfiles -customArgs $customArgs
 
+# Details of available variables are at https://www.visualstudio.com/en-us/docs/build/define/variables
 Write-Verbose "_envTeamServer        = $env:_envTeamServer"
 Write-Verbose "_envTeamProject       = $env:_envTeamProject"
 Write-Verbose "_envTeamBuildId       = $env:_envTeamBuildId"
@@ -541,6 +542,8 @@ Write-Verbose "_envSolutionRoot      = $env:_envSolutionRoot"
 Write-Verbose "_envWorkingDirectory  = $env:_envWorkingDirectory"
 Write-Verbose "_envSolutionFile      = $env:_envSolutionFile"
 Write-Verbose "_envSolutionFileList  = $env:_envSolutionFileList"
+
+Write-Verbose "BUILD_BUILDNUMBER     = $env:BUILD_BUILDNUMBER"
 
 # Make sure that we have a working directory set of the process 
 Write-Verbose "Setting working directory to $cwd"
