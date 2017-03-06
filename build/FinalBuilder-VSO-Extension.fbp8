@@ -7,6 +7,28 @@ begin
     targetid = {824B016D-5807-4A15-9072-0FC710BF4DC6}
     rootaction
     begin
+      action.npm.install
+      begin
+        actiontypeid = {FE47E961-9FA8-4106-8639-368C022D43AE}
+        customactionname = "Npm Install"
+        enabletimeout = false
+        id = {07FC6BB2-4389-4AF3-888B-FD1ABE889033}
+        impersonateusenetcredonly = false
+        impersonateuser = false
+        terminateontimeout = true
+        timeoutlength = 2
+        as.targetdirectory = %FBPROJECTDIR%
+        as.packagetype = Definition
+        as.packagedefinition = tfx-cli
+        as.saveas = False
+        as.saveexact = False
+        as.forceremotefetch = False
+        as.preventoptionaldependencies = False
+        as.preventshrinkwrapfile = False
+        as.linkglobaltolocal = False
+        as.preventbinarylinks = False
+        as.globally = True
+      end
       action.process.execute
       begin
         captureoutput = true
