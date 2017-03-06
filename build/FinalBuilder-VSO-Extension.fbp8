@@ -1,0 +1,41 @@
+﻿project
+begin
+  projectid = {DA6AA03F-3614-4951-BA05-BAC709F75CA5}
+  target
+  begin
+    name = Default
+    targetid = {824B016D-5807-4A15-9072-0FC710BF4DC6}
+    rootaction
+    begin
+      action.process.execute
+      begin
+        captureoutput = true
+        enablelivecapture = true
+        enablereturncodecheck = true
+        enabletimeout = false
+        expandimpersonationtoken = false
+        hidewindow = true
+        id = {08C539C6-3E6C-4F84-AC25-01A4E6CB2C7C}
+        impersonateusenetcredonly = false
+        impersonateuser = false
+        logoutput = true
+        logprocessparameters = true
+        processoraffinity = 0
+        processpriority = tpNormal
+        programname = "tfx extension publish --token %PersonalAccessToken% --rev-version"
+        redirectstderr = true
+        returncodecomparator = rcEqualTo
+        returncodetocheck = 0
+        terminateontimeout = false
+        timeoutlength = 0
+        useerrordialogmonitor = false
+        waitforcompletion = true
+      end
+    end
+  end
+  variable
+  begin
+    name = PersonalAccessToken
+    variablescope = vtProject
+  end
+end

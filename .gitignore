@@ -1,2 +1,5 @@
 *.vsix
 node_modules/**
+build/FinalBuilder-VSO-Extension.fbpbrk
+build/FinalBuilder-VSO-Extension.fbpInf
+build/FinalBuilder_VSO_Extension.fbl8
