@@ -51,7 +51,7 @@ begin
         redirectstderr = true
         returncodecomparator = rcEqualTo
         returncodetocheck = 0
-        startindir = %FBPROJECT%\\..\\
+        startindir = %FBPROJECTDIR%\\..\\
         terminateontimeout = false
         timeoutlength = 0
         useerrordialogmonitor = false
