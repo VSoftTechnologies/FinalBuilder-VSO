@@ -44,7 +44,7 @@ begin
         impersonateuser = false
         logoutput = true
         logprocessparameters = true
-        params = "extension publish --token %PersonalAccessToken% --rev-version"
+        params = "extension publish --token %PersonalAccessToken% --override \"{\\\"version\\\": \\\"%VersionString%\\\"}\""
         processoraffinity = 0
         processpriority = tpNormal
         programname = tfx.cmd
@@ -63,5 +63,11 @@ begin
   begin
     name = PersonalAccessToken
     variablescope = vtProject
+  end
+  variable
+  begin
+    name = VersionString
+    variablescope = vtProject
+    variabletype = btString
   end
 end
