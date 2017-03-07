@@ -21,6 +21,7 @@ begin
         as.packagetype = Definition
         as.packagedefinition = tfx-cli
         as.saveas = False
+        as.saveasdependency = Dependencies
         as.saveexact = False
         as.forceremotefetch = False
         as.preventoptionaldependencies = False
@@ -28,6 +29,7 @@ begin
         as.linkglobaltolocal = False
         as.preventbinarylinks = False
         as.globally = True
+        as.loglevel = info
       end
       action.process.execute
       begin
@@ -42,9 +44,10 @@ begin
         impersonateuser = false
         logoutput = true
         logprocessparameters = true
+        params = "extension publish --token %PersonalAccessToken% --rev-version"
         processoraffinity = 0
         processpriority = tpNormal
-        programname = "tfx extension publish --token %PersonalAccessToken% --rev-version"
+        programname = tfx.cmd
         redirectstderr = true
         returncodecomparator = rcEqualTo
         returncodetocheck = 0
