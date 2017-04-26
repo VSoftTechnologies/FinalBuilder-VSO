@@ -67,7 +67,8 @@ function Set-FB8EnvironmentVars([string]$buildPlatform, [string]$buildFlavor, [s
 	    
 	# Split the custom arguments by line
     if (![string]::IsNullOrEmpty($customArgs)) { 
-		$customArgsList = $customArgs -split [Environment]::NewLine 
+		# Always return an array split on either \r or \n
+	    $customArgsList = @($customArgs -split '[\r\n]' | where {$_})
 				
  	    for ($i = 0; $i -lt $customArgsList.length; $i++) { 
 			 [Environment]::SetEnvironmentVariable("_envCustomArg$i", $customArgsList[$i], "Process")
