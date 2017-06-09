@@ -14,7 +14,7 @@
   "version": {
     "Major": "1",
     "Minor": "0",
-    "Patch": "187"
+    "Patch": "194"
   },
   "minimumAgentVersion": "1.83.2",
   "groups": [
@@ -61,6 +61,15 @@
       "required": false,
       "helpMarkDown": "",
       "groupName": "general"
+    },
+    {
+      "name": "includeChangesetsInTriggerFile",
+      "type": "boolean",
+      "label": "Include Changesets In TriggerFile",
+      "defaultValue": "true",
+      "required": false,
+      "groupName": "general",
+      "helpMarkDown": "Included all changesets and files into the trigger file for FinalBuilder."     
     },
     {
       "name": "targets",

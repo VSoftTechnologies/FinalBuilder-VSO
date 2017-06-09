@@ -6,7 +6,8 @@ param (
 	[string]$solutionfile, # The solution file search string for the solution(s) to build.
 	[string]$platform, # The platform to build the solutions under (x86,x64,Any CPU).
 	[string]$flavor, # The flavor of build to perform on the solutions (Debug, Release, Etc).
-	[string]$customArgs # A line seperated list of custom arguments for FinalBuilder. 
+	[string]$customArgs, # A line seperated list of custom arguments for FinalBuilder. 
+	[string]$includeChangesetsInTriggerFile
 )
 
 function Get-FB8Arguments([string]$fbProjectFile, [string]$triggerFilename, [boolean]$noBanner, [string]$targets, [string]$variables, [string]$packages) {
@@ -510,19 +511,29 @@ $buildDef = Get-BuildDefinition $vssEndPoint
 $lastFailedBuild = Get-LastFailedBuild $vssEndPoint $buildDef.definition.id
 $lastSuccessBuild = Get-LastSuccessfulBuild $vssEndPoint $buildDef.definition.id
 
-$fromDate = ""
+if ($includeChangesetsInTriggerFile -eq "True"){
 
-# The date to get changes from is either the last successful build, or the last failed build, or from the start of the repository. 
-if ($lastSuccessBuild -ne $null) {
-	$fromDate = $lastSuccessBuild.startTime
-} elseif ($lastFailedBuild -ne $null) {
-	$fromDate = $lastFailedBuild.startTime
+	$fromDate = ""
+	# The date to get changes from is either the last successful build, or the last failed build, or from the start of the repository. 
+	if ($lastSuccessBuild -ne $null) {
+		$fromDate = $lastSuccessBuild.startTime
+	} elseif ($lastFailedBuild -ne $null) {
+		$fromDate = $lastFailedBuild.startTime
+	} else {
+		$lastWeek = (get-date).AddDays(-7)
+	}
+
+	Write-Verbose "Changessets Since $fromDate"
+
+	# Get the change sets since the date worked out above
+	$changesetsSince = Get-ChangesetsSince -vssEndpoint $vssEndPoint -buildDef $buildDef -fromDate $fromDate
+
+	Write-Verbose "Changesets $changesetsSince"
+
 }
-
-# Get the change sets since the date worked out above
-$changesetsSince = Get-ChangesetsSince -vssEndpoint $vssEndPoint -buildDef $buildDef -fromDate $fromDate
-
-Write-Verbose "Changesets Since $changesetsSince"
+else {
+	$changesetsSince =  @()
+}
 
 # Build the trigger files xml file based on the changesets found above
 $triggerFile = Write-TriggerFiles $vssEndPoint $changesetsSince $buildDef
