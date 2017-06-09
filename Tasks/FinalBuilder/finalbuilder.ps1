@@ -521,6 +521,7 @@ if ($includeChangesetsInTriggerFile -eq "True"){
 		$fromDate = $lastFailedBuild.startTime
 	} else {
 		$lastWeek = (get-date).AddDays(-7)
+		$fromDate = Get-Date -date $lastWeek -format "yyyy-MM-ddTHH:mm:ssZ"
 	}
 
 	Write-Verbose "Changessets Since $fromDate"
