@@ -55,7 +55,8 @@ function Set-FB8EnvironmentVars([string]$buildPlatform, [string]$buildFlavor, [s
 	
 	# Set each environment variable referred to by the Get Team Foundation Build Parameters action		
 	$env:_envTeamServer = $env:SYSTEM_TEAMFOUNDATIONCOLLECTIONURI
-	$env:_envTeamProject = $env:SYSTEM_TEAMPROJECTID
+	$env:_envTeamProject = $env:SYSTEM_TEAMPROJECT
+	$env:_envTeamProjectId = $env:SYSTEM_TEAMPROJECTID
 	$env:_envTeamBuildId = $env:BUILD_BUILDNUMBER
 	$env:_envBuildPlatform = $buildPlatform
 	$env:_envBuildFlavor = $buildFlavor
@@ -547,6 +548,7 @@ Set-FB8EnvironmentVars -buildPlatform $platform -buildFlavor $flavor -dropFolder
 # Details of available variables are at https://www.visualstudio.com/en-us/docs/build/define/variables
 Write-Verbose "_envTeamServer        = $env:_envTeamServer"
 Write-Verbose "_envTeamProject       = $env:_envTeamProject"
+Write-Verbose "_envTeamProjectId     = $env:_envTeamProjectId"
 Write-Verbose "_envTeamBuildId       = $env:_envTeamBuildId"
 Write-Verbose "_envBuildPlatform     = $env:_envBuildPlatform"
 Write-Verbose "_envBuildFlavor       = $env:_envBuildFlavor"
