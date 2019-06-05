@@ -567,7 +567,7 @@ Set-Location $cwd
 Write-Verbose "Generating Arguments"
 
 # Build up the arguments for the FinalBuilder version that we are running. Currently that is only FinalBuilder 8. 
-$fbArgs = Get-FB8Arguments -fbProjectFile $projectFile -noBanner $TRUE -triggerFilename $triggerFile -targets $targets
+$fbArgs = Get-FB8Arguments -fbProjectFile $projectFile -noBanner $TRUE -triggerFilename $triggerFile -targets $targets -tl
 $fb8Path = Get-FinalBuilder8-Location 
 $fb8Path = "$fb8Path\fbcmd.exe"
 
