@@ -2,6 +2,7 @@ param (
     [string]$projectfile, # Path to finalbuilder project. 
     [string]$cwd, # Path to current working directory.
 	[string]$dropfolder, # Path to network location to drop built artifacts.
+	[string]$variables, # List of variables to set for the FinalBuilder project.
 	[string]$targets, # List of targets to run with in the FinalBuilder project.
 	[string]$solutionfile, # The solution file search string for the solution(s) to build.
 	[string]$platform, # The platform to build the solutions under (x86,x64,Any CPU).
@@ -25,7 +26,6 @@ function Get-FB8Arguments([string]$fbProjectFile, [string]$triggerFilename, [boo
 		$argsOut = $argsOut + " -t:`"$targets`""
 	}
     
-	# TODO Add custom variables passing from GUI	
 	# If there are any FinalBuilder variables, add them to the arguments.
 	if (-not [System.String]::IsNullOrWhiteSpace($variables)) {
 		$variables = $variables.Replace("`n", ";")
@@ -460,6 +460,7 @@ Write-Verbose "Entering script FinalBuilder.ps1"
 Write-Verbose "projectfile   = $projectfile"
 Write-Verbose "cws           = $cwd"
 Write-Verbose "dropfolder    = $dropfolder"
+Write-Verbose "variables     = $variables"
 Write-Verbose "targets       = $targets"
 Write-Verbose "solutionfile  = $solutionfile"
 Write-Verbose "platform      = $platform"
