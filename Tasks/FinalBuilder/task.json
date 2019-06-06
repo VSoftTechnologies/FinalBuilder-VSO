@@ -23,6 +23,11 @@
             "isExpanded": true
         },
         {
+            "name": "variables",
+            "displayName": "Variables",
+            "isExpanded": true
+        },
+        {
             "name": "targets",
             "displayName": "Targets",
             "isExpanded": false
@@ -68,6 +73,15 @@
             "required": false,
             "groupName": "general",
             "helpMarkDown": "Included all changesets and files into the trigger file for FinalBuilder."
+        },
+        {
+            "name": "variables",
+            "type": "multiLine",
+            "label": "Variables",
+            "defaultValue": "",
+            "required": false,
+            "helpMarkDown": "",
+            "groupName": "variables"
         },
         {
             "name": "targets",
