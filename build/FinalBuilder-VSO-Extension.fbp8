@@ -11,6 +11,7 @@ begin
       begin
         actiontypeid = {FE47E961-9FA8-4106-8639-368C022D43AE}
         customactionname = "Npm Install"
+        enabled = false
         enabletimeout = false
         id = {07FC6BB2-4389-4AF3-888B-FD1ABE889033}
         impersonateusenetcredonly = false
@@ -30,6 +31,61 @@ begin
         as.preventbinarylinks = False
         as.globally = True
         as.loglevel = info
+      end
+      action.group
+      begin
+        id = {81EEAEBF-59A0-4C70-AA91-56BE4828DF94}
+        variable
+        begin
+          name = TaskJSON
+          variablescope = vtLocal
+          variabletype = btString
+        end
+        action.textfile.read
+        begin
+          allowsharedreading = false
+          escapevariables = false
+          fbvariable = TaskJSON
+          filename = %TaskFile%
+          id = {08EA6C49-3F8C-434D-BEC7-81405A44064E}
+          putcontentsinvar = true
+        end
+        action.script.run
+        begin
+          id = {FE1A9ED8-8E87-4A3C-B91C-E89DA43E1917}
+          action.script
+          begin
+            name = BeforeAction
+            script >
+            beginscript
+              //USEUNIT "%FBDIR%\Scripts\json2.js"
+              
+              var versions = FBVariables.VersionString.split('.');
+              
+              
+              var taskJson = JSON.parse(FBVariables.TaskJSON)
+              
+              taskJson.version.Major = versions[0];
+              taskJson.version.Minor = versions[1];
+              taskJson.version.Patch = versions[2];
+              
+              FBVariables.TaskJSON = JSON.stringify(taskJson,null, '\t');
+            endscript
+            scriptlanguage = JavaScript
+          end
+        end
+        action.textfile.write
+        begin
+          createifnotexists = false
+          encoding = UTF8
+          expandvariables = true
+          filename = %TaskFile%
+          id = {30F2FADF-C0AF-4CE4-9822-5AFB4FE4C3AC}
+          ignorenocontent = true
+          newcontent = %!TaskJSON%
+          writebom = false
+          writetoposition = toOverwrite
+        end
       end
       action.process.execute
       begin
@@ -66,6 +122,14 @@ begin
   end
   variable
   begin
+    defaultvalue = %FBPROJECTDIR%\\..\\Tasks\\FinalBuilder\\task.json
+    name = TaskFile
+    variablescope = vtProject
+    variabletype = btString
+  end
+  variable
+  begin
+    defaultvalue = 1.0.0
     name = VersionString
     variablescope = vtProject
     variabletype = btString
